@@ -57,8 +57,8 @@ rm("X_train_cleaned","X_test_cleaned","X_test","X_train")
 ## Renaming activity labels to activity names. This is why we have read the file with activity labels.
 for (i in 1:nrow(activity_labels)){X$Activity[X$Activity==activity_labels[i,1]]<-activity_labels[i,2]}
 
-## Now the data set X is tidy. It contains several observations of many features each,
-## for each participant and each activity.
+## Now the data set X is tidy. For each participant and each activity, it contains 
+## several observations of many features each.
 ## Everything is properly named.
 ## It remains to take the average of each feature variable for each activity and each participant.
 ## The dplur command "summarise_each" is made exactly for that.
